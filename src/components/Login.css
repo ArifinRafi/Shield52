@@ -1,0 +1,55 @@
+
+.btn-primary{
+    width: 50%;
+    background: rgb(99, 16, 162) !important;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-primary:hover{
+    background: rgb(155, 87, 223) !important;
+}
+
+.login-form{
+    
+    background-color: rgba(194, 191, 198, .35);
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+
+}
+
+.logo{
+    height: 100px;
+    padding-left: 100px;
+    
+}
+.logo-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    padding: 20px;
+}
+
+.btn-class{
+    padding-top: 10px;
+
+}
+
+.btn-secondary{
+    background: rgb(99, 16, 162) !important;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-secondary:hover{
+    background: rgb(155, 87, 223) !important;
+}
