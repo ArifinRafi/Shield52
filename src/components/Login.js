@@ -2,7 +2,7 @@ import React from 'react';
 import './Login.css';
 import logo from '../images/robo.png'
 import {signInWithPopup} from 'firebase/auth'
-import {auth, provider, provider2} from '../firebase/firebase.init';
+import {auth, provider, provider2, providerFacebook} from '../firebase/firebase.init';
 
 const Login = () => {
     const handlesignIn = () => {
@@ -20,6 +20,18 @@ const Login = () => {
             signInWithPopup(auth, provider2)
             .then(result => {
                 const user = result.user;
+                console.log(user);
+            })
+            .catch(error=> {
+                console.error('error', error);
+            })
+        }
+
+        const handleWithFacebook = () => {
+            signInWithPopup(auth, providerFacebook)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
             })
             .catch(error=> {
                 console.error('error', error);
@@ -55,7 +67,7 @@ const Login = () => {
         <span> <i class="fa-brands fa-google"></i> </span>Google
       </button>
 
-      <button className='btn btn-secondary mx-2' onClick={handleWithGit}>
+      <button className='btn btn-secondary mx-2' onClick={handleWithFacebook}>
         <span> <i class="fa-brands fa-facebook"></i> </span> Facebook
       </button>
 
