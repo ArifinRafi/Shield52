@@ -1,7 +1,8 @@
 import React from 'react';
 import './Login.css';
 import logo from '../images/robo.png'
-import {signInWithPopup} from 'firebase/auth'
+import {signInWithPopup, createUserWithEmailAndPassword} from 'firebase/auth'
+
 import {auth, provider, provider2, providerFacebook} from '../firebase/firebase.init';
 
 const Login = () => {
@@ -37,28 +38,48 @@ const Login = () => {
                 console.error('error', error);
             })
         }
+
+        const handleSubmit = (event) => {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            console.log(email, password);
+            createUserWithEmailAndPassword(auth, email, password) 
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+
+            .catch(error => {
+                console.error('error', error);
+            })
+        }
     return (
     <div>
         <div className='container logo-form ' id='logo'>
             <img className='logo' src={logo} alt="" />
         </div> 
 
+        {/* Need to use a <form></form> and include all the form items into it */}
+
         <div className='container'>
+        
             <div className='login-form'>
                 <div className='form-row px-2'>
-                    <input type="text" placeholder='email' className='form-control mt-2' id='email' />
+                    <input type="text" placeholder='email' className='form-control mt-2' id='email' name='email'  />
                 </div>
             
                 <div className='form-row px-2'>
-                    <input type="password" placeholder='Password' className='form-control mt-2 required' id='password' />    
+                    <input type="password" placeholder='Password' className='form-control mt-2 required' id='password' name='password' />    
                 </div>
 
             
-                <div className='d-flex justify-content-center' id='login'>
-                    <button className='btn btn-primary mt-4'>Login</button>
+                <div className='d-flex justify-content-center'>
+                    <button onClick={handleSubmit} id='login' className='btn btn-primary mt-4'>Login</button>
                     
                 </div>
             </div>
+           
+           
         </div>
 
         <div className='btn-class'>

@@ -7,7 +7,7 @@
 }
 
 .btn-primary:hover{
-    background: rgb(155, 87, 223) !important;
+    background: rgb(61, 1, 121) !important;
 }
 
 .login-form{
@@ -48,8 +48,9 @@
     background: rgb(99, 16, 162) !important;
     display: flex;
     justify-content: center;
+    box-shadow: 100px !important;
 }
 
 .btn-secondary:hover{
-    background: rgb(155, 87, 223) !important;
+    background: rgb(61, 1, 121) !important;
 }
