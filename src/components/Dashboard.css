@@ -8,7 +8,7 @@
 .header-second{
   width: 99%;
   background-color: rgb(74, 72, 142);
-  margin-top: 65px;
+  margin-top: 20px;
   height: 200px;
   position: absolute;
   border-radius: 30px;
@@ -22,7 +22,7 @@
 .third-row-inside{
   width: 99%;
   background-color: rgb(211, 211, 223);
-  margin-top: 300px;
+  margin-top: 250px;
   height: 200px;
   position: absolute;
   margin-left: 10px;
@@ -31,8 +31,8 @@
 .last-row-inside{
   width: 99%;
   background-color: rgb(211, 211, 223);
-  margin-top: 520px;
-  height: 230px;
+  margin-top: 480px;
+  height: 200px;
   position: absolute;
   margin-left: 10px;
 }
@@ -63,12 +63,30 @@
   color: aliceblue;
   margin-left:  50px;
   border-radius: 30px !important;
+  display: list-item;
+  align-items: center;
+  color: rgb(254, 254, 254);
 }
 .notification-card:hover{
   transform: scale(1.1);  
   transition: transform 0.4s ease;
 }
  
+.logo{
+  height: 50px !important;
+  width: 300px;
+  margin-left: 78%;
+  margin-top: 10PX;
+}
+
+.name{
+  color: aliceblue;
   
+}
+
+.user-button{
+  display: flex;
+  justify-content: start;
+}
 
 
