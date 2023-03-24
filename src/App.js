@@ -1,11 +1,13 @@
 import './App.css'; 
-import Login from './components/Login';
+import Dashboard from './components/Dashboard';
+import Login from './components/Login'
+
 
 function App() {
 
   return (
     <div className='App'>
-      <Login></Login>
+      <Dashboard></Dashboard>
     </div>
   );
 }

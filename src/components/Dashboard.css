@@ -1,0 +1,74 @@
+.header-background{
+    background-color: rgb(33, 16, 66);
+    height: 100vh;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header-second{
+  width: 99%;
+  background-color: rgb(74, 72, 142);
+  margin-top: 65px;
+  height: 200px;
+  position: absolute;
+  border-radius: 30px;
+  margin-left: 10px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+
+
+.third-row-inside{
+  width: 99%;
+  background-color: rgb(211, 211, 223);
+  margin-top: 300px;
+  height: 200px;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.last-row-inside{
+  width: 99%;
+  background-color: rgb(211, 211, 223);
+  margin-top: 520px;
+  height: 230px;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.workers-card {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.card{
+  width: 250px;
+  height: 130px !important;
+  background-color: rgb(225, 108, 108);
+  position: absolute;
+  margin-left:  50px;
+  border-radius: 20px !important;
+}
+.card:hover{
+  transform: scale(1.1);  
+  transition: transform 0.4s ease;
+}
+
+.notification-card{
+  width: 200px;
+  height: 135px ;
+  background-color: rgb(33, 16, 66);
+  color: aliceblue;
+  margin-left:  50px;
+  border-radius: 30px !important;
+}
+.notification-card:hover{
+  transform: scale(1.1);  
+  transition: transform 0.4s ease;
+}
+ 
+  
+
+
