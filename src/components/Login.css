@@ -21,21 +21,22 @@
 
 
 .container{
-    display: flex;
-    justify-content: center;
+    display: flex !important;
+    justify-content: center !important;
 
 }
 
 .logo{
-    height: 100px;
-    padding-left: 100px;
+    height: 150px !important;
+    width: 500px !important;
+    
     
 }
 .logo-form{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 5%;
     padding: 20px;
 }
 

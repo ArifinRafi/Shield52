@@ -72,11 +72,11 @@
   transition: transform 0.4s ease;
 }
  
-.logo{
-  height: 50px !important;
-  width: 300px;
+.logo2{
+  height: 60px !important;
+  width: 250px;
   margin-left: 78%;
-  margin-top: 10PX;
+  margin-top: -45px;
 }
 
 .name{
@@ -87,6 +87,10 @@
 .user-button{
   display: flex;
   justify-content: start;
+}
+
+.nav-text{
+  color: aliceblue;
 }
 
 
