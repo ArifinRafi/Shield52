@@ -6,6 +6,8 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 
 const Dashboard = () => {
@@ -15,9 +17,46 @@ const Dashboard = () => {
     const addnew = () => {
 
         const card = document.createElement('div');
+        const card2 = document.createElement('div');
         const worker = document.getElementById('workers-card');
+        const notification_card = document.getElementById('worker-update');
         card.classList.add('card');
+        card2.classList.add('notification-card');
+
+        const name = document.getElementById('worker-name').value;
+        const name2 = document.getElementById('worker-name').value;
+        var new_logo = '<i className="fa-regular fa-user  fa-2x"></i>';
+        const worker_name = document.createElement('p');
+        const worker_name2 = document.createElement('p');
+        const worker_logo = document.createElement('div');
+        const device = document.createElement('span');
+        const oxygen = document.createElement('span');
+        const floor = document.createElement('span');
+        
+        
+        worker_name.innerHTML=name;
+        worker_name2.innerHTML=name2;
+        worker_name2.appendChild(document.createElement('br'));
+        worker_logo.innerHTML=new_logo;
+        device.innerHTML='Device: OFF';
+        device.appendChild(document.createElement('br'));
+        oxygen.innerHTML='Oxygen: --';
+        oxygen.appendChild(document.createElement('br'));
+        floor.innerHTML='Floor: --';
+        
+        card2.appendChild(worker_name2);
+        card2.appendChild(device);
+        card2.appendChild(oxygen);
+        card2.appendChild(floor);
+
+        card.appendChild(worker_name);
+        card.appendChild(worker_logo);
+
+        
+        
+
         worker.appendChild(card);
+        notification_card.appendChild(card2);
         handleClose();
 
     }
@@ -71,13 +110,14 @@ const Dashboard = () => {
                 type="text"
                 placeholder="Full Name"
                 autoFocus
+                id='worker-name'
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Contact Number</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="01XXXXXXXXXXX"
+                placeholder="01XXXXXXXX"
                 autoFocus
               />
             </Form.Group>
@@ -85,7 +125,7 @@ const Dashboard = () => {
               <Form.Label>NID Numebr</Form.Label>
               <Form.Control
                 type="number"
-                placeholder="XXXXXXXXXXXXXXXX"
+                placeholder="XXXXXXXXXXX"
                 autoFocus
               />
             </Form.Group>
@@ -94,9 +134,14 @@ const Dashboard = () => {
               <Form.Label>Helmet Number</Form.Label>
               <Form.Control
                 type="number"
-                placeholder="XXXXXXXXXXXXXXXX"
+                placeholder="XXXXXXXXXXXX"
                 autoFocus
               />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Upload a Photo</Form.Label> <br />
+              <input type="file" name="" id="" />
             </Form.Group>
 
             <Form.Group
@@ -123,23 +168,23 @@ const Dashboard = () => {
                 </div>
                 <div className="third-row-inside">
                     <h2>Important Notifications</h2>
-                    <div className='workers-card'>
-                        <div className="notification-card"><p><i class="fa-regular fa-user"></i> Worker 1</p>
+                    <div className='workers-card' id='worker-update'>
+                        <div className="notification-card" id='notification-card' ><p><i class="fa-regular fa-user"></i> Worker 1</p>
                         <span>Device: OFF </span> <br />
                         <span>Oxygen: -- </span> <br />
                         <span>Floor: --</span>                        
                         </div>
-                        <div className="notification-card"><p><i class="fa-regular fa-user"></i> Worker 2</p>
+                        <div className="notification-card" id='notification-card'><p><i class="fa-regular fa-user"></i> Worker 2</p>
                         <span>Device: OFF </span> <br />
                         <span>Oxygen: -- </span> <br />
                         <span>Floor: --</span>
                         </div>
-                        <div className="notification-card"><p><i class="fa-regular fa-user"></i> Worker 3</p>
+                        <div className="notification-card" id='notification-card'><p><i class="fa-regular fa-user"></i> Worker 3</p>
                         <span>Device: OFF </span> <br />
                         <span>Oxygen: -- </span> <br />
                         <span>Floor: --</span>
                         </div>
-                        <div className="notification-card"><p> <i class="fa-regular fa-user"></i> Worker 4</p>
+                        <div className="notification-card" id='notification-card'><p> <i class="fa-regular fa-user"></i> Worker 4</p>
                         <span>Device: OFF </span> <br />
                         <span>Oxygen: -- </span> <br />
                         <span>Floor: --</span>
