@@ -1,52 +1,47 @@
 .header-background{
-    background-color: rgb(33, 16, 66);
-    height: 100vh;
-    background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.header-second{
-  width: 99%;
-  background-color: rgb(74, 72, 142);
-  margin-top: 20px;
-  height: 200px;
-  position: absolute;
-  border-radius: 30px;
-  margin-left: 10px;
+  background-image: url("../images/background.jpg");
+  border-radius: 0px;
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(50px);
+  height: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
+  color: aliceblue;;
 }
-
 
 .third-row-inside{
   width: 99%;
-  background-color: rgb(211, 211, 223);
-  margin-top: 250px;
-  height: 200px;
+  background-color: rgba(18, 18, 31, 0.6);
+  margin-top: 70px;
+  height: 250px;
   position: absolute;
   margin-left: 10px;
 }
 
 .last-row-inside{
   width: 99%;
-  background-color: rgb(211, 211, 223);
-  margin-top: 480px;
-  height: 200px;
+  background-color: rgba(21, 21, 22, 0.6);
+  margin-top: 350px;
+  height: 300px;
   position: absolute;
   margin-left: 10px;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
 }
 
 .workers-card {
+  
  display: flex;
  justify-content: center;
  align-items: center;
+ color: black;
 }
 
 .card{
   width: 250px;
   height: 130px !important;
-  background-color: rgb(225, 108, 108);
+  background-color: rgba(255, 255, 255, 0.75) !important;  
+  backdrop-filter: blur(5px);
   position: absolute;
   margin-left:  50px;
   border-radius: 20px !important;
@@ -58,8 +53,8 @@
 
 .notification-card{
   width: 200px;
-  height: 135px ;
-  background-color: rgb(33, 16, 66);
+  height: 135px;
+  background-color: rgba(15, 15, 16, 0.7);
   color: aliceblue;
   margin-left:  50px;
   border-radius: 30px !important;
@@ -91,6 +86,17 @@
 
 .nav-text{
   color: aliceblue;
+}
+
+.nav-text{
+  color: white;
+}
+
+.nav-text:hover{
+  background-color:  rgba(18, 18, 31, 0.9);
+  /* width: 80px; */
+  height: 20px;
+  border-radius: 5px;
 }
 
 

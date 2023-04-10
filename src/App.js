@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className='App'>
-     <Dashboard></Dashboard>
+    <Dashboard></Dashboard>
     </div>
   );
 }
