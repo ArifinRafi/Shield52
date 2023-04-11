@@ -4,6 +4,7 @@ import logo from '../images/robo.png'
 import {signInWithPopup, createUserWithEmailAndPassword} from 'firebase/auth'
 
 import {auth, provider, provider2, providerFacebook} from '../firebase/firebase.init';
+import Navbar from './Navbar';
 
 const Login = () => {
     const handlesignIn = () => {
@@ -55,6 +56,7 @@ const Login = () => {
         }
     return (
     <div>
+        <Navbar></Navbar>
         <div className=' logo-form ' id='logo'>
             <img className='logo' src={logo} alt="" />
         </div> 

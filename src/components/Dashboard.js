@@ -6,8 +6,10 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
+import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import Navbar from './Navbar';
 
 
 const Dashboard = () => {
@@ -68,25 +70,8 @@ const Dashboard = () => {
            
     
             <div className='header-background'>
-            <Nav
-      activeKey="/home"
-      onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-    >
-      <Nav.Item>
-        <Nav.Link  href="/home"> <p className='nav-text'> Dashboard</p></Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-1"> <p className='nav-text'>Workers Info</p></Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-2"> <p className='nav-text'>Connect</p></Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="">
-        <p className='nav-text'> Log Out</p>
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
+              <Navbar></Navbar>
+            
                 <img className='logo2' src={logo2} alt="" />
                 <div className='header-second'> 
                     <h2>Worker Records</h2> 

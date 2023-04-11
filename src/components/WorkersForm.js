@@ -1,30 +1,13 @@
 import React from 'react';
 import './WorkersFrom.css'
 import { Nav, Form, Button } from 'react-bootstrap';
+import Navbar from './Navbar';
 
 const WorkersForm = () => {
   return (
     
-    <div>
-      <Nav
-      activeKey="/home"
-      onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-    >
-      <Nav.Item>
-        <Nav.Link  href="/home"> <p className='nav-text'> Dashboard</p></Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-1"> <p className='nav-text'>Workers Info</p></Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-2"> <p className='nav-text'>Connect</p></Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="">
-        <p className='nav-text'> Log Out</p>
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
+    <div className='page-body'>
+      <Navbar></Navbar>
       <div className='container' >
         
      

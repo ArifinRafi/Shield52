@@ -1,4 +1,6 @@
-
+body {
+    background-color: aliceblue !important;
+}
 .btn-primary{
     width: 50%;
     background: rgb(99, 16, 162) !important;
