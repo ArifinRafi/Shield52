@@ -3,18 +3,20 @@ body {
 }
 .btn-primary{
     width: 50%;
-    background: rgb(99, 16, 162) !important;
+    background: rgb(51, 49, 177, 0.9) !important;
     display: flex;
     justify-content: center;
+    color:  rgb(255, 255, 255) !important ;
+    border-color: transparent !important;
 }
 
 .btn-primary:hover{
-    background: rgb(61, 1, 121) !important;
+    background:  rgb(223, 208, 237)  !important;
 }
 
 .login-form{
     
-    background-color: rgba(194, 191, 198, .35);
+    background-color: rgba(52, 51, 54, 0.4);
     border-radius: 10px;
     padding: 20px;
     width: 50%;
@@ -29,31 +31,39 @@ body {
 }
 
 .logo{
-    height: 150px !important;
+    height: 130px !important;
     width: 500px !important;
+    margin-top: 50px;
     
     
 }
 .logo-form{
+   
     display: flex;
     justify-content: center !important;
     align-items: center !important;
-    margin-top: 5%;
     padding: 20px;
 }
 
 .btn-class{
     padding-top: 10px;
+    margin: 2%;
 
 }
 
 .btn-secondary{
-    background: rgb(99, 16, 162) !important;
+    background: rgb(255, 255, 255) !important;
     display: flex;
     justify-content: center;
     box-shadow: 100px !important;
+    color: rgb(99, 16, 162) !important;
+    border-color: transparent !important;
 }
 
 .btn-secondary:hover{
-    background: rgb(61, 1, 121) !important;
+    background: rgb(223, 208, 237) !important;
+}
+.login-back{
+    background-image: url('../images/background.jpg');
+    height: 100vh;
 }

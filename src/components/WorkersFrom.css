@@ -1,7 +1,7 @@
 .page-body{
     background-image: url('../images/background.jpg');
     background-size: cover;
-    height: 100vh;
+    /* height: 120vh; */
 }
 
 .form-container{

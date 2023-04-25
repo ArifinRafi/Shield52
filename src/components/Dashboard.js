@@ -10,6 +10,7 @@ import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import Navbar from './Navbar';
+import { Container } from 'react-bootstrap';
 
 
 const Dashboard = () => {
@@ -65,130 +66,135 @@ const Dashboard = () => {
     return (
 
         
-        
-        <div>
+        <Container fluid>
+
+<div>
            
     
-            <div className='header-background'>
-              <Navbar></Navbar>
-            
-                <img className='logo2' src={logo2} alt="" />
-                <div className='header-second'> 
-                    <h2>Worker Records</h2> 
-                    <div className='workers-card' id='workers-card'>
-                        <div id='card' className="card"><p>Md. Rahim</p>
-                        <p><i className="fa-regular fa-user  fa-2x"></i></p></div>
-                        <div className="card"><p>Salam Sheikh</p>
-                        <p><i className="fa-regular fa-user  fa-2x"></i></p></div>
-                        <div className="card" id='addNew' onClick={handleShow}> <p>Add New Worker</p>
-                        <p><i className="fa-regular fa-user  fa-2x"></i></p></div>
-                        <Modal show={show} onHide={handleClose}>                          
-                          <Modal.Header closeButton>
-                            <Modal.Title>Workers Form</Modal.Title>
-                          </Modal.Header>
-                          <Modal.Body>
-                          <form>
-                            
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Enter Full Name</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Full Name"
-                autoFocus
-                id='worker-name'
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Contact Number</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="01XXXXXXXX"
-                autoFocus
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>NID Numebr</Form.Label>
-              <Form.Control
-                type="number"
-                placeholder="XXXXXXXXXXX"
-                autoFocus
-              />
-            </Form.Group>
+           <div className='header-background'>
+             <Navbar></Navbar>
+           
+               <img className='logo2' src={logo2} alt="" />
+               <div className='header-second'> 
+                   <h2>Worker Records</h2> 
+                   <div className='workers-card' id='workers-card'>
+                       <div id='card' className="card"><p>Md. Rahim</p>
+                       <p><i className="fa-regular fa-user  fa-2x"></i></p></div>
+                       <div className="card"><p>Salam Sheikh</p>
+                       <p><i className="fa-regular fa-user  fa-2x"></i></p></div>
+                       <div className="card" id='addNew' onClick={handleShow}> <p>Add New Worker</p>
+                       <p><i className="fa-regular fa-user  fa-2x"></i></p></div>
+                       <Modal show={show} onHide={handleClose}>                          
+                         <Modal.Header closeButton>
+                           <Modal.Title>Workers Form</Modal.Title>
+                         </Modal.Header>
+                         <Modal.Body>
+                         <form>
+                           
+           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+             <Form.Label>Enter Full Name</Form.Label>
+             <Form.Control
+               type="text"
+               placeholder="Full Name"
+               autoFocus
+               id='worker-name'
+             />
+           </Form.Group>
+           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+             <Form.Label>Contact Number</Form.Label>
+             <Form.Control
+               type="text"
+               placeholder="01XXXXXXXX"
+               autoFocus
+             />
+           </Form.Group>
+           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+             <Form.Label>NID Numebr</Form.Label>
+             <Form.Control
+               type="number"
+               placeholder="XXXXXXXXXXX"
+               autoFocus
+             />
+           </Form.Group>
 
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Helmet Number</Form.Label>
-              <Form.Control
-                type="number"
-                placeholder="XXXXXXXXXXXX"
-                autoFocus
-              />
-            </Form.Group>
+           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+             <Form.Label>Helmet Number</Form.Label>
+             <Form.Control
+               type="number"
+               placeholder="XXXXXXXXXXXX"
+               autoFocus
+             />
+           </Form.Group>
 
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Upload a Photo</Form.Label> <br />
-              <input type="file" name="" id="" />
-            </Form.Group>
+           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+             <Form.Label>Upload a Photo</Form.Label> <br />
+             <input type="file" name="" id="" />
+           </Form.Group>
 
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group>
-          </form>
-                          </Modal.Body>
-                          <Modal.Footer>
-                            <Button variant="secondary" onClick={handleClose}>
-                              Close
-                            </Button>
-                            <Button variant="primary" onClick={addnew}>
-                              Add New
-                            </Button>
-                          </Modal.Footer>
-                        </Modal>
-                        </div>
-
-                    
-                </div>
-                <div className="third-row-inside">
-                    <h2>Important Notifications</h2>
-                    <div className='workers-card' id='worker-update'>
-                        <div className="notification-card" id='notification-card' ><p><i class="fa-regular fa-user"></i> Worker 1</p>
-                        <span>Device: OFF </span> <br />
-                        <span>Oxygen: -- </span> <br />
-                        <span>Floor: --</span>                        
-                        </div>
-                        <div className="notification-card" id='notification-card'><p><i class="fa-regular fa-user"></i> Worker 2</p>
-                        <span>Device: OFF </span> <br />
-                        <span>Oxygen: -- </span> <br />
-                        <span>Floor: --</span>
-                        </div>
-                        <div className="notification-card" id='notification-card'><p><i class="fa-regular fa-user"></i> Worker 3</p>
-                        <span>Device: OFF </span> <br />
-                        <span>Oxygen: -- </span> <br />
-                        <span>Floor: --</span>
-                        </div>
-                        <div className="notification-card" id='notification-card'><p> <i class="fa-regular fa-user"></i> Worker 4</p>
-                        <span>Device: OFF </span> <br />
-                        <span>Oxygen: -- </span> <br />
-                        <span>Floor: --</span>
-                        </div>
-                    </div></div>  
-                <div className="last-row-inside">
-                    <div className='user-button'>
-                    {/* <button type="button" class="btn btn-secondary">Secondary</button>
-                    <button type="button" class="btn btn-secondary">Secondary</button>
-                    <button type="button" class="btn btn-secondary">Secondary</button>  */}
-                    <h2>Device Configurations</h2> 
-                    </div>
-                    
-                    </div> 
+           <Form.Group
+             className="mb-3"
+             controlId="exampleForm.ControlTextarea1"
+           >
+             <Form.Label>Example textarea</Form.Label>
+             <Form.Control as="textarea" rows={3} />
+           </Form.Group>
+         </form>
+                         </Modal.Body>
+                         <Modal.Footer>
+                           <Button variant="secondary" onClick={handleClose}>
+                             Close
+                           </Button>
+                           <Button variant="primary" onClick={addnew}>
+                             Add New
+                           </Button>
+                         </Modal.Footer>
+                       </Modal>
+                       </div>
 
                    
-                </div>
-                
-        </div>
+               </div>
+               <div className="third-row-inside">
+                   <h2>Important Notifications</h2>
+                   <div className='workers-card' id='worker-update'>
+                       <div className="notification-card" id='notification-card' ><p><i class="fa-regular fa-user"></i> Worker 1</p>
+                       <span>Device: OFF </span> <br />
+                       <span>Oxygen: -- </span> <br />
+                       <span>Floor: --</span>                        
+                       </div>
+                       <div className="notification-card" id='notification-card'><p><i class="fa-regular fa-user"></i> Worker 2</p>
+                       <span>Device: OFF </span> <br />
+                       <span>Oxygen: -- </span> <br />
+                       <span>Floor: --</span>
+                       </div>
+                       <div className="notification-card" id='notification-card'><p><i class="fa-regular fa-user"></i> Worker 3</p>
+                       <span>Device: OFF </span> <br />
+                       <span>Oxygen: -- </span> <br />
+                       <span>Floor: --</span>
+                       </div>
+                       <div className="notification-card" id='notification-card'><p> <i class="fa-regular fa-user"></i> Worker 4</p>
+                       <span>Device: OFF </span> <br />
+                       <span>Oxygen: -- </span> <br />
+                       <span>Floor: --</span>
+                       </div>
+                   </div></div>  
+               <div className="last-row-inside">
+                   <div className='user-button'>
+                   {/* <button type="button" class="btn btn-secondary">Secondary</button>
+                   <button type="button" class="btn btn-secondary">Secondary</button>
+                   <button type="button" class="btn btn-secondary">Secondary</button>  */}
+                   <h2>Device Configurations</h2> 
+                   </div>
+                   
+                   </div> 
+
+                  
+               </div>
+               
+       </div>
+
+
+        </Container>
+        
     );
 };
 

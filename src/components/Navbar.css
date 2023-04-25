@@ -1,4 +1,8 @@
-.nav-back{
-    background-color: transparent !important;
-   border: none;
+.nav-link{ 
+   color: aliceblue !important;
+}
+
+.nav-link:hover{
+    color: rgb(168, 164, 164) !important;
+    font-size: 15px;
 }

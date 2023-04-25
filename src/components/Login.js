@@ -1,6 +1,7 @@
 import React from 'react';
 import './Login.css';
-import logo from '../images/robo.png'
+import logo from '../images/logo2.png'
+import background from '../images/background.jpg'
 import {signInWithPopup, createUserWithEmailAndPassword} from 'firebase/auth'
 
 import {auth, provider, provider2, providerFacebook} from '../firebase/firebase.init';
@@ -56,8 +57,11 @@ const Login = () => {
         }
     return (
     <div>
+        
+
+        <div className='login-back'>
         <Navbar></Navbar>
-        <div className=' logo-form ' id='logo'>
+            <div className=' logo-form mt-5' id='logo'>
             <img className='logo' src={logo} alt="" />
         </div> 
 
@@ -101,6 +105,12 @@ const Login = () => {
         </div>
         
     </div>
+        </div>
+
+        
+            
+       
+       
     );
 };
 

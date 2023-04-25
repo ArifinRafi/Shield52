@@ -2,6 +2,7 @@ import './App.css';
 import Dashboard from './components/Dashboard';
 import Login from './components/Login';
 import Main from './components/Main';
+import SignUp from './components/SignUp';
 import WorkersForm from './components/WorkersForm';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
@@ -10,7 +11,8 @@ function App() {
         {path:'/', element:<Login></Login>}, 
         {path: 'dashboard', element: <Dashboard></Dashboard>},
         {path: '/', element: <Login></Login>},
-        {path: 'register', element: <WorkersForm></WorkersForm>}
+        {path: 'register', element: <WorkersForm></WorkersForm>},
+        {path: 'signup', element: <SignUp></SignUp>}
     ])
 
   return (

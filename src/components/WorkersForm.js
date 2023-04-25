@@ -1,9 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './WorkersFrom.css'
 import { Nav, Form, Button } from 'react-bootstrap';
 import Navbar from './Navbar';
+import  Axios from 'axios';
+import { Modal } from 'react-bootstrap';
+
+
 
 const WorkersForm = () => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+  const submitForm = () => {
+    const worker_name = document.getElementById('worker_name').value;
+    const worker_address = document.getElementById('address').value;
+    const worker_id = document.getElementById('nid_no').value;
+  }
+
+  const [WorkersName, setname] = useState("");
+  const [address, setaddress] = useState("");
+  const [nidNumber, setnidNumber] = useState("");
+  const [Age, setage] = useState("");
+
+
+const submit_btn = () => {
+  Axios.post("http://localhost:5001/create", {WorkersName:WorkersName, Age:Age, address:address, nidNumber:nidNumber}).then(() => {
+
+  });
+};
+
+const newSubmit = () => {
+  handleShow();
+  submit_btn();
+}
+
+  
+
+  
   return (
     
     <div className='page-body'>
@@ -20,7 +55,10 @@ const WorkersForm = () => {
                 type="text"
                 placeholder="Full Name"
                 autoFocus
-                id='worker-name'
+                id='worker_name'
+                onChange={(e) => {
+                  setname(e.target.value);
+                }}
               />
         </Form.Group>
 
@@ -30,7 +68,10 @@ const WorkersForm = () => {
                 type="text"
                 placeholder="Age"
                 autoFocus
-                id='worker-name'
+                id='worker_age'
+                onChange={(e) => {
+                  setage(e.target.value);
+                }}
               />
         </Form.Group>
 
@@ -40,7 +81,10 @@ const WorkersForm = () => {
                 type="text"
                 placeholder="NID/Passport Number"
                 autoFocus
-                id='worker-name'
+                id='nid_no'
+                onChange={(e) => {
+                  setnidNumber(e.target.value);
+                }}
               />
         </Form.Group>
 
@@ -50,7 +94,10 @@ const WorkersForm = () => {
                 type="text"
                 placeholder="Address"
                 autoFocus
-                id='worker-name'
+                id='address'
+                onChange={(e) => {
+                  setaddress(e.target.value);
+                }}
               />
         </Form.Group>
        
@@ -62,7 +109,7 @@ const WorkersForm = () => {
                 type="file"
                 placeholder="Upload"
                 autoFocus
-                id='worker-name'
+                id='worker_photo'
               />
               
         </Form.Group>
@@ -107,17 +154,26 @@ const WorkersForm = () => {
         </Form.Group>
         <div className="container ">
           
-          <Button variant="primary mb-5 submit-btn">Submit</Button>{' '} 
+          <Button onClick={newSubmit} variant="primary mb-5 submit-btn">Submit</Button>{' '}     
+          <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+          <Modal.Title>Workers Form Submission</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>New Worker Succesfully Registered</Modal.Body>
+         <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Okay
+          </Button>
+          </Modal.Footer>
+          </Modal>
           
         </div>
          
-        
-
-        
-
        </div>
      </div>
    </div>
+
+   
     </div>
   );
 };
