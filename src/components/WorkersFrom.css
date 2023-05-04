@@ -1,12 +1,12 @@
 .page-body{
     background-image: url('../images/background.jpg');
     background-size: cover;
-    /* height: 120vh; */
+     height: 120vh; 
 }
 
 .form-container{
-    height: 800px;
-    width: 600px;
+    height: 700px;
+    width: 500px;
     background-color: rgb(216, 224, 231,0.8);
     border-radius: 15px;
 }

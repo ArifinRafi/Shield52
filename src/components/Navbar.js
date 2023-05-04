@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <div >
             <Nav >
-      <Nav.Link className='nav-link' as={Link} to="/">Login</Nav.Link>
+      <Nav.Link className='nav-link' as={Link} to="/signup">signup</Nav.Link>
       <Nav.Link className='nav-link' as={Link} to="/Dashboard">Dashboard</Nav.Link>
       <Nav.Link className='nav-link' as={Link} to="/Register">Register</Nav.Link>
     </Nav>

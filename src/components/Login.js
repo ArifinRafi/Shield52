@@ -6,8 +6,10 @@ import {signInWithPopup, createUserWithEmailAndPassword} from 'firebase/auth'
 
 import {auth, provider, provider2, providerFacebook} from '../firebase/firebase.init';
 import Navbar from './Navbar';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate();
     const handlesignIn = () => {
         signInWithPopup(auth, provider) 
         .then(result => {
@@ -42,13 +44,16 @@ const Login = () => {
         }
 
         const handleSubmit = (event) => {
+            event.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             console.log(email, password);
             createUserWithEmailAndPassword(auth, email, password) 
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                navigate('/Dashboard')
+                
+                
             })
 
             .catch(error => {
@@ -80,9 +85,18 @@ const Login = () => {
 
             
                 <div className='d-flex justify-content-center'>
-                    <button onClick={handleSubmit} id='login' className='btn btn-primary mt-4'>Login</button>
+                    
+                    <button onClick={handleSubmit}  id='login' className='btn btn-primary mt-4'>Login
+                    </button>
+
+                    
+                    
+                   
                     
                 </div>
+                <p className='text-center'>
+      Already have an account? <a href='signup'>SignUp</a>
+    </p>
             </div>
            
            

@@ -41,7 +41,7 @@ const newSubmit = () => {
   
   return (
     
-    <div className='page-body'>
+    <div className='page-body container-flex flex-column vh-120'>
       <Navbar></Navbar>
       <div className='container' >
         
@@ -154,7 +154,7 @@ const newSubmit = () => {
         </Form.Group>
         <div className="container ">
           
-          <Button onClick={newSubmit} variant="primary mb-5 submit-btn">Submit</Button>{' '}     
+          <Button onClick={newSubmit} variant="primary mb-5 my-5 submit-btn">Submit</Button>{' '}     
           <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
           <Modal.Title>Workers Form Submission</Modal.Title>

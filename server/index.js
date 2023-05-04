@@ -39,12 +39,19 @@ app.post("/create", (req, res) => {
 // app.get("/", (req, res) => {
 //     // const name = "Arifin";
 //     // const age = "24";
-//     const sqlInsert = "INSERT INTO workers (workersName, address, nidNumber) VALUES ('Md. Arifizzamanrafirafi', 'Bogra', '3434343435544')";
+//     const sqlInsert = "INSERT INTO workers (workersName, Age, address, nidNumber) VALUES ('Md. Ari', 'Bo', '3434343435544', 'gggggffg')";
 //     db.query(sqlInsert, (error, result) => {
 //         console.log("error", error);
 //         console.log("result", error);
 //         res.send("f");
 //     })
+    
+// })
+
+// app.get("/", (req, res) => {
+
+//         res.send("f");
+
     
 // })
 
