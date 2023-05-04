@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Shield52/static/css/main.185abfde.css",
+    "main.js": "/Shield52/static/js/main.9c6bab9a.js",
+    "static/js/787.633816a4.chunk.js": "/Shield52/static/js/787.633816a4.chunk.js",
+    "static/media/background.jpg": "/Shield52/static/media/background.bb899d6ed696220faeba.jpg",
+    "static/media/logo2.png": "/Shield52/static/media/logo2.96e19c3582cfbbb6c75d.png",
+    "index.html": "/Shield52/index.html",
+    "main.185abfde.css.map": "/Shield52/static/css/main.185abfde.css.map",
+    "main.9c6bab9a.js.map": "/Shield52/static/js/main.9c6bab9a.js.map",
+    "787.633816a4.chunk.js.map": "/Shield52/static/js/787.633816a4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.185abfde.css",
+    "static/js/main.9c6bab9a.js"
+  ]
+}
